@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:padding="5dp"
+    >
+
+    <ImageView
+        android:id="@+id/communityBanner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/placeholder2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="12dp"/>
+
+    <TextView
+        android:id="@+id/communityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/communityBanner"
+        android:text="r/IndianDankMeme"
+        app:layout_constraintBottom_toBottomOf="@id/communityBanner"
+        android:layout_marginStart="12dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/totalMemberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/communityName"
+        android:text="Total Members : "
+        app:layout_constraintStart_toEndOf="@id/communityBanner"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/totalMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/communityName"
+        android:text="112"
+        app:layout_constraintStart_toEndOf="@id/totalMemberText"
+        />
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/joinCommunityBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="12dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

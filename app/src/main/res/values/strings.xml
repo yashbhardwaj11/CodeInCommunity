@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CodeInSpoof</string>
+    <string name="home">Home</string>
+    <string name="post">Post</string>
+    <string name="explore">Explore</string>
+    <string name="create_community">Create Community</string>
+    <string name="community_name">Community name</string>
+    <string name="r_community_name">r/Community_name</string>
+    <string name="community_type">Community Type</string>
+    <string-array name="community_options">
+        <item>Public</item>
+        <item>Private</item>
+    </string-array>
+
+</resources>

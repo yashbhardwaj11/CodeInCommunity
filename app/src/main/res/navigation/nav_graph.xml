@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.yash.codeinspoof.Fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.yash.codeinspoof.Fragments.secondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.yash.codeinspoof.Fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_communityViewFragment2"
+            app:destination="@id/communityViewFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_commentFragment2"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityViewFragment2"
+        android:name="com.yash.codeinspoof.Fragments.CommunityViewFragment"
+        android:label="fragment_community_view"
+        tools:layout="@layout/fragment_community_view" >
+        <action
+            android:id="@+id/action_communityViewFragment2_to_createPostFragment"
+            app:destination="@id/createPostFragment" />
+        <action
+            android:id="@+id/action_communityViewFragment2_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_communityViewFragment2_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <action
+            android:id="@+id/action_communityViewFragment2_to_requestedUsersFragment"
+            app:destination="@id/requestedUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="com.yash.codeinspoof.Fragments.CreatePostFragment"
+        android:label="fragment_create_post"
+        tools:layout="@layout/fragment_create_post" >
+        <action
+            android:id="@+id/action_createPostFragment_to_communityViewFragment2"
+            app:destination="@id/communityViewFragment2" />
+        <action
+            android:id="@+id/action_createPostFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postCommentFragment"
+        android:name="com.yash.codeinspoof.Fragments.PostCommentFragment"
+        android:label="fragment_post_comment"
+        tools:layout="@layout/fragment_post_comment" >
+        <action
+            android:id="@+id/action_postCommentFragment_to_commentFragment"
+            app:destination="@id/commentFragment"
+            app:popUpTo="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.yash.codeinspoof.Fragments.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" >
+        <action
+            android:id="@+id/action_commentFragment_to_postCommentFragment"
+            app:destination="@id/postCommentFragment" />
+        <action
+            android:id="@+id/action_commentFragment_to_createPostFragment"
+            app:destination="@id/createPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestedUsersFragment"
+        android:name="com.yash.codeinspoof.Fragments.RequestedUsersFragment"
+        android:label="fragment_requested_users"
+        tools:layout="@layout/fragment_requested_users" />
+</navigation>
